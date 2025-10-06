@@ -1,0 +1,11 @@
+#include <stdio.h>
+
+int main()
+{
+    float temperatureC, temperatureF;
+    printf("Enter the temperature in Celsius for conversion: ");
+    scanf("%f", &temperatureC);
+    temperatureF= temperatureC*1.8 +32;
+    printf("\n The entered temperature in Fahrenheit is: %f", temperatureF);
+    return 0;
+}
