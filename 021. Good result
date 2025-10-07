@@ -1,0 +1,23 @@
+#include <stdio.h>
+
+int main()
+{
+    int mark1, mark2, mark3;
+    float average;
+    printf("\nEnter the marks obtained in three subjects: ");
+    scanf("%d %d %d", &mark1, &mark2, &mark3);
+    average= (mark1+mark2+mark3)/3.0f;
+    if(mark1>=80||mark2>=80||mark3>=80)
+    {
+        printf("\nGood result!");
+    }
+    else if(average>=60)
+    {
+        printf("\nGood result!");
+    }
+    else
+    {
+        printf("\nKeep trying!");
+    }
+    return 0;
+}
