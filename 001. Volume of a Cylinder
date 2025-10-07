@@ -3,12 +3,12 @@
 
 int main()
 {
-    int radius, height; 
+    float radius, height; 
     float volume;
     printf("\nInput the radius of the cylinder: ");
-    scanf("%d", &radius);
+    scanf("%f", &radius);
     printf("\nInput the height of the cylinder: ");
-    scanf("%d", &height);
+    scanf("%f", &height);
     volume=PI*radius*radius*height;
     printf("\nThe volume of the cylider is: %f", volume);
 
