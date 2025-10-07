@@ -1,0 +1,11 @@
+#include <stdio.h>
+
+int main()
+{
+    char incharac;
+    printf("\nEnter a character constant: ");
+    scanf("%c", &incharac);
+    printf("\nThe ASCII value of %c is %d",incharac,incharac);
+    
+    return 0;
+}
