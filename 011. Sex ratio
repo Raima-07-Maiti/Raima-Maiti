@@ -1,0 +1,14 @@
+#include <stdio.h>
+
+int main()
+{
+    int NumOfFemales, NumOfMales;
+    float ratio;
+    printf("\nEnter the number of males: ");
+    scanf("%d", &NumOfMales);
+    printf("\nEnter the number of females: ");
+    scanf("%d", &NumOfFemales);
+    ratio=((float)NumOfFemales/(float)NumOfMales)*1000.f;
+    printf("\nThere are %.2f females per 1000 males.", ratio);
+    return 0;
+}
