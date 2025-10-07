@@ -1,0 +1,64 @@
+#include <stdio.h>
+int Sumcal(int num1, int num2);
+int Sumcal(int num1, int num2)
+   {
+       return (num1 +num2);
+   }
+
+int subscal(int num1, int num2);
+int subscal(int num1, int num2)
+   {
+       return (num1 -num2);
+   }
+   int mulcal(int num1, int num2);
+   int mulcal(int num1, int num2)
+   {
+       return (num1*num2);
+   }
+   float divcal(int num1, int num2);
+   float divcal(int num1, int num2)
+   {
+       if(num1==0 || num2 == 0)
+       {
+           printf("\nNot defined.");
+           return -9999;
+       }
+       else 
+       {
+           return num1/num2;
+       }
+   }
+int main()
+{
+   int n1, n2; 
+   int sum, sub, mul, choice; float Div;
+   printf("\nEnter first number:");
+   scanf("%d", &n1);
+   printf("\nEnter second number:");
+   scanf("%d", &n2);
+   printf("\nEnter the operation you want to choose: \n1. Summation \n2. Substraction \n3. Multiplication \n4.Division. \n");
+   scanf("%d", &choice);
+       
+       switch(choice)
+       {
+           case 1:
+           sum=Sumcal(n1,n2);
+           printf("%d", sum);
+           break;
+           case 2:
+           sub=subscal(n1,n2);
+           printf("%d", sub);
+           break;
+           case 3:
+           mul=mulcal(n1, n2);
+           printf("%d", mul);
+           break;
+           case 4:
+           Div=divcal(n1,n2);
+           printf("%f", Div);
+           break;
+           default:
+           printf("\nWrong choice!");
+       }
+    return 0;
+ }
