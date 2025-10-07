@@ -1,0 +1,15 @@
+#include <stdio.h>
+
+int main()
+{
+    int number, leftmostDigit, rightmostDigit, product, sum;
+    printf("\nEnter a 4-digit number: ");
+    scanf("%d",&number);
+    rightmostDigit = number % 10;
+    leftmostDigit = number / 1000;
+    product=leftmostDigit*rightmostDigit;
+    sum=leftmostDigit+rightmostDigit;
+    printf("\nProduct of the leftmost and rightmost digits is %d", product);
+    printf("\nSum of the leftmost and rightmost digits is %d", sum);
+    return 0;
+}
