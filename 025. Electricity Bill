@@ -1,0 +1,27 @@
+#include <stdio.h>
+
+int main()
+{
+   unsigned int unit, bill, surcharge; 
+   printf("\nEnter the units consumed: ");
+    scanf("%u", &unit);
+    if(unit<=100)
+    {
+        bill=2*unit;
+        printf("\nThe Electricity Bill is : %u", bill);
+    }
+    else if(unit>100 &&unit<=300)
+    {
+        bill=3*unit;
+        printf("\nThe Electricity Bill is : %u", bill);
+    }
+    else
+    {
+        bill=4*unit;
+        surcharge=bill*2.5/100;
+        bill= bill+surcharge;
+        printf("\nThe Electricity Bill is : %u", bill);
+    }
+    
+    return 0; 
+}
