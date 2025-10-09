@@ -1,0 +1,21 @@
+#include <stdio.h>
+
+int main()
+{
+   unsigned int number, sum=0, product=1, counter=0; 
+   printf("\nEnter any number: ");
+   scanf("%u", &number);
+   
+   while(number!=0)
+   {
+       sum+=number%10;
+       product*=number%10;
+       number/=10;
+       counter++;
+   }
+   
+   printf("\nThe number of digits in the number is: %u", counter);
+   printf("\nThe sum of the digits is %u and the product of the digits is %u", sum, product);
+   
+    return 0;
+}
