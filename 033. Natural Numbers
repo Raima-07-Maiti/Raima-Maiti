@@ -1,0 +1,15 @@
+#include <stdio.h>
+
+int main()
+{
+   unsigned int n, i;
+   printf("\nEnter the value for n: ");
+   scanf("%u", &n);
+   
+   for(i=1; i<=n; i++)
+   {
+       printf("%u, ", i);
+   }
+   
+    return 0;
+}
