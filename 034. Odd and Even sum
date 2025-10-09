@@ -1,0 +1,25 @@
+#include <stdio.h>
+
+int main()
+{
+   unsigned int n, i, OddSum=0, EvenSum=0;
+   printf("\nEnter the value for n: ");
+   scanf("%u", &n);
+   
+   for(i=1; i<=n; i++)
+   {
+       if(i%2==0)
+       {
+           EvenSum+=i;
+       }
+       else
+       {
+           OddSum+=i;
+       }
+   }
+   
+   printf("\nThe sum of odd numbers: %u", OddSum);
+   printf("\nThe sum of even numbers: %u", EvenSum);
+
+    return 0;
+}
