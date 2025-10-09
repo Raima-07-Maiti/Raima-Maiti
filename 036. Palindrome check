@@ -1,0 +1,25 @@
+#include <stdio.h>
+
+int main()
+{
+   unsigned int number, palinCheck=0, temp;
+   printf("\nEnter any positive integer: ");
+   scanf("%u", &number);
+   temp=number;
+   while(temp!=0)
+   {
+       palinCheck=palinCheck*10 + temp%10;
+       temp/=10;
+   }
+   if(palinCheck==number)
+   {
+       printf("\nThe entered number is Palindrome.");
+   }
+   else
+   {
+       printf("\nThe entered number is NOT Palindrome.");
+
+   }
+
+    return 0;
+}
