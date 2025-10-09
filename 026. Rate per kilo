@@ -1,0 +1,34 @@
+#include <stdio.h>
+
+int main()
+{
+    unsigned int weightp, rate;
+    char ctype;
+    printf("\nEnter the weight of the parcel in kilograms: ");
+    scanf("%u", &weightp);
+    printf("\nEnter the type of the courier. 'I' for International and 'D' for Domestic: ");
+    scanf(" %c", &ctype);
+    if(weightp<=5)
+    {
+        rate=800*weightp;
+    }
+    else if(weightp<=10 &&weightp>5)
+    {
+        rate=700*weightp;
+    }
+    else 
+    {
+        rate=500*weightp;
+    }
+    
+    if(ctype=='I')
+    {
+        printf("\nThe rate of the parcel to be delivered will be: %u", rate+1500);
+    }
+    else if(ctype=='D')
+    {
+      printf("\nThe rate of the parcel to be delivered will be: %u", rate);  
+    }
+    
+    return 0;
+}
