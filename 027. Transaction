@@ -1,0 +1,27 @@
+#include <stdio.h>
+
+int main()
+{
+    unsigned int accountBalance, withdrawalAmt;
+    printf("\n Enter the Account Balance: ");
+    scanf("%u", &accountBalance);
+    printf("\n Enter the Withdrawal Account: ");
+    scanf(" %u", &withdrawalAmt);
+    if(withdrawalAmt%100!=0)
+    {
+        printf("\nTransaction failed. The Withdrawal Amount entered is not divisible by 100.");
+    }
+    else if(withdrawalAmt>accountBalance)
+    {
+        printf("\nTransaction failed. The Withdrawal Amount entered is more than the Account Balance.");
+    }
+    else if(accountBalance - withdrawalAmt<500)
+    {
+        printf("\nTransaction failed. The minimum amount after transaction must be 500.");
+    }
+    else
+    {
+        printf("Successful Transaction.");
+    }
+    return 0;
+}
