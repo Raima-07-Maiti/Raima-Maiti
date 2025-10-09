@@ -1,0 +1,41 @@
+#include <stdio.h>
+
+int main()
+{
+    unsigned int age, flag=0; 
+    char citizenshipStatus, criminalRecord;
+    printf("\nEnter your age: ");
+    scanf("%u", &age);
+    printf("\nAre you a Citizen? Y/N: ");
+    scanf(" %c", &citizenshipStatus);
+    printf("\nDo you have a criminal record? Y/N: ");
+    scanf(" %c", &criminalRecord);
+    if(age>=18 && age<60)
+    {
+        if(citizenshipStatus=='Y')
+        {
+            if(criminalRecord=='N')
+            {
+                printf("\nEligible to vote!");
+            }
+            else
+            {
+                printf("\nNot eligible. You have a criminal record.");
+            }
+        }
+        else
+        {
+            printf("\nNot eligible. You are not a Citizen.");
+        }
+    }
+    else if(age >= 60)
+    {
+       printf("\nSenior Citizen Eligible.");
+    }
+    else
+    {
+        printf("\nYou are underage.");
+    }
+
+    return 0;
+}
