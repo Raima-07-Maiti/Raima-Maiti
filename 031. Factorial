@@ -1,0 +1,16 @@
+#include <stdio.h>
+
+int main()
+{
+    unsigned int number, factorial=1;
+    printf("\nEnter an integer: ");
+    scanf("%u", &number);
+    while(number!=0)
+    {
+        factorial=factorial*number;
+        number--;
+    }
+    printf("\nThe factorial of the number is %u.", factorial);
+
+    return 0;
+}
