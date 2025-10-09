@@ -1,0 +1,23 @@
+#include <stdio.h>
+#include <math.h>
+int main()
+{
+   unsigned int number, temp, i, Armstrong=0;
+   printf("\nEnter a 3-digit number: ");
+   scanf("%u", &number);
+   temp=number;
+   while(temp!=0)
+   {
+       Armstrong+=pow(temp%10, 3);
+       temp/=10;
+   }
+   if(Armstrong==number)
+   {
+       printf("\nIt is Armstrong.");
+   }
+   else
+   {
+       printf("\nIt is NOT Armstrong.");
+   }
+    return 0;
+}
