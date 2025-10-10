@@ -1,0 +1,28 @@
+#include <stdio.h>
+
+int main()
+{
+    unsigned int number, square, flag=0; 
+    printf("\nEnter any number: ");
+    scanf("%u", &number);
+    square=number*number;
+    while(square!=0 && number!=0)
+    {
+        if(square%10!=number%10)
+        {
+            flag++;
+        }
+        number/=10;
+        square/=10;
+    }
+    if(flag!=0)
+    {
+        printf("\nNot an Automorphic number.");
+    }
+    else
+    {
+        printf("\nThe entered number is Automorphic.");
+    }
+
+    return 0;
+}
