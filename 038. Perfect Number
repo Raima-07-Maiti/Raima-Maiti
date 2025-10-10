@@ -1,0 +1,26 @@
+#include <stdio.h>
+
+int main()
+{
+    unsigned int number, sum=0, i; 
+    printf("\nEnter any number: ");
+    scanf("%u", &number);
+    for(i=1; i<number; i++)
+    {
+        if(number%i==0)
+        {
+            sum+=i;
+        }
+    }
+    if(sum==number)
+    {
+        printf("\n%u is a perfect number.", number);
+    }
+    else
+    {
+        printf("\n%u is NOT a perfect number.", number);
+  
+    }
+
+    return 0;
+}
