@@ -1,0 +1,26 @@
+#include <stdio.h>
+#include <math.h>
+
+int main()
+{
+    unsigned int number, i, sum=0; 
+    printf("\nEnter a number: ");
+    scanf("%u", &number);
+    for(i=1; i<number; i++)
+    {
+        if(number%i==0)
+        {
+            sum+=i;
+        }
+    }
+    if(sum>number)
+    {
+        printf("\nThe number is an Abundant number.");
+    }
+    else
+    {
+        printf("\nThe entered number is NOT Abundant.");
+    }
+    
+    return 0;
+}
