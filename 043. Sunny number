@@ -1,0 +1,22 @@
+#include <stdio.h>
+#include <math.h>
+
+int main()
+{
+    unsigned int number; 
+    double Sunny;
+    printf("\nEnter a number: ");
+    scanf("%u", &number);
+    number=number+1;
+    Sunny= sqrt(number)-floor(sqrt(number));
+    if (Sunny==0)
+    {
+        printf("\nThe entered number is a Sunny Number.");
+    }
+    else
+    {
+        printf("\nThe entered number is NOT Sunny.");
+    }
+    
+    return 0;
+}
