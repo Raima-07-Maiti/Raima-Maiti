@@ -1,0 +1,31 @@
+#include <stdio.h>
+
+int main()
+{
+    unsigned int number, happyNumCheck=0, digit;
+    
+    printf("\nEnter any number: ");
+    scanf("%u", &number);
+    while(happyNumCheck==0 || happyNumCheck>9)
+    {
+        happyNumCheck=0;
+        while(number!=0)
+        {
+            digit=number%10;
+            happyNumCheck+=digit*digit;
+            number/=10;
+        }
+        number=happyNumCheck;
+    }
+    
+    if(happyNumCheck==1)
+    {
+        printf("\nThe entered number is a Happy Number.");
+    }
+    else
+    {
+        printf("\nThe entered number is NOT a Happy Number %u", happyNumCheck);
+    }
+
+    return 0;
+}
