@@ -1,0 +1,32 @@
+#include <stdio.h>
+int main()
+{
+    int i, j, n, count=0;
+    printf("\nEnter the number of elements to be stored in the array: "); 
+    scanf("%d", &n);
+    int arr[n];
+    int visited[n]; //flag array with 0s and 1s
+    printf("\nEnter the elements of the array: ");
+    for(i=0; i<n; i++)
+    {
+        scanf("%d", &arr[i]);
+        visited[i]=0; //initialising first with 0s (not repeated)
+    }
+    for(i=0; i<n; i++)
+    {
+        if(visited[i]==1)
+        {
+            continue;
+        }
+        count=0;
+        for(j=0; j<n; j++)
+        {
+            if(arr[i]==arr[j])
+            {
+                count++;
+                visited[j]=1;
+            }
+        }
+        printf("%d's frequency is: %d\n", arr[i], count);
+    }
+     return 0;
