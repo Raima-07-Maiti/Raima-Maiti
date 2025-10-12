@@ -1,0 +1,32 @@
+#include <stdio.h>
+
+int main()
+{
+    int n, i, maximum, maximum2; 
+    printf("\nEnter the number of elements to be stored in the array: ");
+    scanf("%d", &n);
+    int arr[n];
+    
+    printf("\nEnter the array elements: ");
+    for(i=0; i<n; i++)
+    {
+        scanf("%d", &arr[i]);
+    }
+    for(i = 1; i < n; i++)
+    {
+        if(arr[i] > maximum)
+        {
+            maximum2 = maximum;
+            maximum = arr[i];
+        }
+        else if(arr[i] > maximum2 && arr[i] < maximum)
+        {
+            maximum2 = arr[i];
+        }
+    }
+    printf("\nThe maximum element in the array is: %d", maximum);
+    printf("\nThe second maximum element in the array is: %d", maximum2);
+
+
+    return 0;
+}
