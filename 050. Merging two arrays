@@ -1,0 +1,51 @@
+#include <stdio.h>
+int main()
+{
+    int n, m, i, j;
+    printf("\nEnter the number of elements to be stored in the first array: ");
+    scanf("%d", &n);
+    printf("\nEnter the number of elements to be stored in the second array: ");
+    scanf("%d", &m);
+    int l=n+m;
+    int arr1[n], arr2[m];
+    int merge[l];
+    printf("\nEnter the elements of the first array: ");
+    for(i=0; i<n; i++)
+    {
+        scanf("%d", &arr1[i]);
+    }
+    printf("\nEnter the elements of the second array: ");
+    for(i=0; i<m; i++)
+    {
+        scanf("%d", &arr2[i]);
+    }
+    //merging the arrays
+    for(i=0; i<n; i++)
+    {
+        merge[i]=arr1[i];
+    }
+    for(j=0; j<m; j++)
+    {
+        merge[j+n]=arr2[j];
+    }
+    int temp;//temporary variable to store the ith element of the array.
+    //sorting the merged array, incase the user doesn't enter sorted array
+    for(i=0; i<l-1; i++)
+    {
+        for(j=0; j<l-i-1; j++)
+        {
+            if(merge[j]>merge[j+1])
+            {
+            temp=merge[j];
+            merge[j]=merge[j+1];
+            merge[j+1]=temp;
+            }
+        }
+    }
+    printf("\nThe sorted merged array: ");
+    for(i=0; i<l; i++)
+    {
+        printf("%d\n", merge[i]);
+    }
+    return 0;
+}
