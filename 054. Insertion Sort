@@ -1,0 +1,35 @@
+#include <stdio.h>
+
+int main()
+{
+    int i, pointer, j, n;
+    printf("\nEnter the number of elements to be stored in the array: "); 
+    scanf("%d", &n);
+    int arr[n];
+    printf("\nEnter the elements of the array: ");
+    for(i=0; i<n; i++)
+    {
+        scanf("%d", &arr[i]);
+    }
+    //insertion sort implementation to sort the user-entered array in ascending order
+    for(i=1; i<n; i++)
+    {
+        pointer=arr[i];
+        for(j=i-1; j>=0; j--)
+        {
+            if(pointer<arr[j])
+            {
+                arr[j+1]= arr[j];
+                arr[j]=pointer; 
+            }
+        } 
+    }
+    //printing the sorted array
+    printf("\nThe array after sorting: ");
+    for(i=0; i<n; i++)
+    {
+        printf("\n%d", arr[i]);
+    }
+
+    return 0;
+}
