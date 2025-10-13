@@ -1,0 +1,40 @@
+#include <stdio.h>
+int prime(int n); 
+int prime(int n)
+{
+    int count=0, i;
+   for(i=2; i<n;i++)
+   {
+       if(n%i==0)
+       {
+           count++;
+       }
+   }
+   if(count==0)
+   {
+       return n;
+   }
+   else if(count!=0)
+   {
+     return 0;  
+   }
+}
+
+int main()
+{
+   int lowerLimit, upperLimit, i;
+   printf("\nEnter the lower limit of the range: ");
+   scanf("%d", &lowerLimit);
+   printf("\nEnter the upper limit of the range: ");
+   scanf("%d", &upperLimit);
+   printf("\nThe prime numbers in that range are: ");
+   for(i=lowerLimit; i<=upperLimit; i++)
+   {
+       if(prime(i)!=0)
+       {
+       printf("%d, ", prime(i));
+       }
+   }
+
+    return 0;
+}
