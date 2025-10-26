@@ -5,7 +5,7 @@ int main()
     int number; 
     printf("\nEnter a 3-digit number: ");
     scanf("%d", &number);
-    if(number%100>0 && number&100<10)
+    if(number/100>0 && number/100<10)
     {
         if(number%3==0)
         {
