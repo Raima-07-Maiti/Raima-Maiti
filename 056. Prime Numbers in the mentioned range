@@ -1,13 +1,15 @@
 #include <stdio.h>
+#include <math.h>
 int prime(int n); 
 int prime(int n)
 {
-    int count=0, i;
-   for(i=2; i<n;i++)
+    int count=0;
+   for(int i=2; i<=sqrt(n);i++)
    {
        if(n%i==0)
        {
-           count++;
+           count=1;
+           break;
        }
    }
    if(count==0)
@@ -25,6 +27,10 @@ int main()
    int lowerLimit, upperLimit, i;
    printf("\nEnter the lower limit of the range: ");
    scanf("%d", &lowerLimit);
+   if(lowerLimit==1)
+   {
+       lowerLimit++;
+   }
    printf("\nEnter the upper limit of the range: ");
    scanf("%d", &upperLimit);
    printf("\nThe prime numbers in that range are: ");
