@@ -1,0 +1,43 @@
+#include <stdio.h>
+#include <math.h>
+
+int sumMatrix(int M[][3], int rows, int columns)
+{
+    int sum=0;
+    for(int i=0; i< rows; i++)
+    {
+        for(int j=0; j<columns; j++)
+        {
+            sum+=M[i][j];
+        }
+    }
+   return sum; 
+}
+
+int main()
+{
+    
+    int arr[3][3], sumOfElements;
+    //Entering the elements of the Matrix
+    printf("\nEnter the elements of the matrix: ");
+    for(int i=0; i<3; i++)
+    {
+        for(int j=0; j<3; j++)
+        {
+            scanf("%d", &arr[i][j]);
+        }
+    }
+    //printing the Matrix once
+    printf("\nThe Matrix: \n");
+    for(int i=0; i< 3; i++)
+    {
+        for(int j=0; j<3; j++)
+        {
+            printf("%d\t", arr[i][j]);
+        }
+        printf("\n");
+    }
+    sumOfElements= sumMatrix(arr, 3, 3);
+    printf("\nSum of the elements of the array is: %d", sumOfElements);
+    return 0;
+}
