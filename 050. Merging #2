@@ -3,9 +3,9 @@
 int main()
 {
     unsigned n, m, i=0, j=0, k=0;
-    printf("\nEnter the size of first array: ");
+    printf("\nEnter the length of first array: ");
     scanf("%u", &n);
-    printf("\nEnter the size of second array: ");
+    printf("\nEnter the length of second array: ");
     scanf("%u", &m);
     int arr1[n], arr2[m], merged[n+m];
     printf("\nEnter the elements of the first array: ");
