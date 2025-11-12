@@ -1,0 +1,53 @@
+/******************************************************************************
+
+Twin Prime numbers in a given range
+
+*******************************************************************************/
+#include <stdio.h>
+#include <math.h>
+int isPrime(int a)
+{
+    int flag=0;
+    for(int i=2; i<=sqrt(a); i++)
+    {
+        if(a%i==0)
+        {
+            flag=1;
+            break;
+        }
+    }
+    if(flag==0)
+    {
+        return a;
+    }
+    else
+    {
+        return 0;
+    }
+}
+int main()
+{
+   int lowerLimit, upperLimit;
+   printf("\nEnter the Lower Limit: ");
+   scanf("%d", &lowerLimit);
+   printf("\nEnter the Upper Limit: ");
+   scanf("%d", &upperLimit);
+   if(lowerLimit==1)
+   {
+       lowerLimit+=2;
+   }
+   else if(lowerLimit==2)
+   {
+       lowerLimit++;
+   }
+   for(int i=lowerLimit; i<=upperLimit-2; i++)
+   {
+       int j= i+2;
+       if(isPrime(i)!=0 && isPrime(j)!=0)
+       {
+           printf("(%d, %d), ", i, j);
+       }
+   }
+
+    return 0;
+}
